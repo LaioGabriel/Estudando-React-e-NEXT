@@ -1,36 +1,37 @@
-     export default function ExemploJsx(){
-       
-    const alunos = [
-          {nome: "Ana Silva" , idade: 20 , id: 1 },
-          {nome: "Beatriz Oliveira" , idade: 22 , id: 2 },
-          {nome: "Carlos Pereira" , idade: 21 , id: 3 },
-          {nome: "Daniel Santos" , idade: 23 , id: 4 },
-          {nome: "Eduardo Costa" , idade: 24 , id: 5 },
-          {nome: "Fernanda Lima" , idade: 25 , id: 6 },
-          {nome: "Laio Gabriel" , idade: 26 , id: 7 }
-     ];
+import Aprovado from "@/components/exercicio/aprovado"
+
+export default function Jsx4(){
+
    
-     const spans = alunos.map((aluno) =>{
-        return (
-            <div id="card" key={aluno.id} className=" bg-gray-600  rounded-lg p-8 ">
-                 <span key={aluno.id} className="flex items-center justify-center">
-                    {aluno.nome} - {aluno.idade} anos
-                    </span>
-            </div>
-        )
-     });
+    const listaDeAprovados = [
+  { nome: "Ana", idade: 22 },
+  { nome: "Bruno", idade: 35 },
+  { nome: "Carla", idade: 19 },
+  {nome: "Oruam", idade: 25},
+  {nome: "Mauro", idade: 24},
+
+];
 
     return(
-        <div className="flex flex-col gap-3.5 justify-center h-screen items-center">
+        <div className="caixa">
+            <div className="exercicio">
+                <h1>Entendendo JSX</h1>
+                <div className="conteudo">
+                    <div className="flex flex-col gap-3">
 
-            <div className="grid grid-cols-3  gap-5.5">
-                {spans}
+                    {listaDeAprovados.map((aluno)=>{
+                        return(
+                            <Aprovado nome={aluno.nome} key={aluno.nome} />
+                        )
+                    })}
+                    </div>
+
+                </div>
+                
             </div>
 
         </div>
     )
-    
-}
-//Ainda não estudei a parte de mudança dinâmica de estado em React, então esse exemplo é estático.
-//Mas pra um iniciante ate q tá bom.
+     
 
+}
