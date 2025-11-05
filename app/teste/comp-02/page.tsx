@@ -10,11 +10,11 @@ export default function Jsx4(){
         
       <div>
            
-      <Pagina >
+      
         <h1 className="font-semibold text-white">
           Teste de Página JSX 4
         </h1>
-      </Pagina>
+      
 
       
       </div>

@@ -10,7 +10,7 @@ export default function Jsx4(){
     ]
 
     return(
-        <div className="caixa">
+        <div className="flex flex-col h-screen items-center justify-center">
             <div className="exercicio">
                 <h1>Criando Componentes</h1>
                 <div className="conteudo">

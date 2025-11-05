@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import {Montserrat} from 'next/font/google';
+import Pagina from "@/components/template/Pagina";
 
 
 export const metadata: Metadata = {
@@ -23,9 +24,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={font.className}
-      >
-        {children}
+        className={font.className}>
+          <Pagina>
+            {children}
+          </Pagina>
       </body>
     </html>
   );
