@@ -1,6 +1,5 @@
 'use client'
 import Usuario from "@/.data/.model/usuario";
-import usuarios from './../../.data/.constants/usuarios';
 import { IconEdit, IconTrash } from "@tabler/icons-react";
 
 export interface ListaUsuariosProps {
@@ -8,15 +7,15 @@ export interface ListaUsuariosProps {
   removerUsuario: (usuario: Usuario) => void;
 }
 export default function ListaUsuarios(props: ListaUsuariosProps) {
-    function renderizarUsuario(usuarios: Usuario){
+    function renderizarUsuario(usuario: Usuario){
         return(
             <div className="flex items-center px-6 py-3 rounded-md border justify-between">
                 <div className="flex flex-col">
                <span className="font-semibold">
-                {usuarios.nome}
+                {usuario.nome}
                 </span> 
                 <span className="text-sm text-zinc-400">
-                {usuarios.email}
+                {usuario.email}
                 </span>
                 </div>
 
@@ -24,7 +23,7 @@ export default function ListaUsuarios(props: ListaUsuariosProps) {
                     <button className="bg-blue-500 hover:bg-blue-800 px-4 py-2.5 rounded-md cursor-pointer">Alterar
                         <IconEdit size={16} className="inline-block ml-1"/>
                     </button>
-                    <button className="bg-red-500 hover:bg-red-800 px-4 py-2.5 rounded-md cursor-pointer" onClick={() => props.removerUsuario(usuarios)}>Excluir <IconTrash size={16} className="inline-block ml-1"/></button>
+                    <button className="bg-red-500 hover:bg-red-800 px-4 py-2.5 rounded-md cursor-pointer" onClick={() => props.removerUsuario(usuario)}>Excluir <IconTrash size={16} className="inline-block ml-1"/></button>
                 </section>
             </div>
         )
@@ -34,7 +33,7 @@ export default function ListaUsuarios(props: ListaUsuariosProps) {
         {props.usuarios.map(usuario =>{
 
             return(
-                <li key={usuario.id} className=" ">{renderizarUsuario(usuario)}</li>
+                <li key={usuario.id} >{renderizarUsuario(usuario)}</li>
             
             ) 
         })}
