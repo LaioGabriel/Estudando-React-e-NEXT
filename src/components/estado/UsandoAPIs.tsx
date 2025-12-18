@@ -3,26 +3,25 @@ import { useEffect, useState } from "react";
 
 export default function UsandoAPIs() {
   const [url, setUrl] = useState("");
-  const [dados, setDados] = useState<any>();
-
-  async function obterDados() {
-    try {
-      new URL(url);
-    } catch {
-      setDados({ erro: "URL inválida" });
-      return;
-    }
-
-    try {
-      const resposta = await fetch(url);
-      const dados = await resposta.json();
-      setDados(dados);
-    } catch {
-      setDados({ erro: "Erro ao obter dados" });
-    }
-  }
+  const [dados, setDados] = useState<unknown>();
 
   useEffect(() => {
+    async function obterDados() {
+      try {
+        new URL(url);
+      } catch {
+        setDados({ erro: "URL inválida" });
+        return;
+      }
+
+      try {
+        const resposta = await fetch(url);
+        const dados = await resposta.json();
+        setDados(dados);
+      } catch {
+        setDados({ erro: "Erro ao obter dados" });
+      }
+    }
     obterDados();
   }, [url]);
 
@@ -42,4 +41,5 @@ export default function UsandoAPIs() {
       </pre>
     </div>
   );
+  
 }

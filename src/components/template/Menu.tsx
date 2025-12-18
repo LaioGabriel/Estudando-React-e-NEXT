@@ -1,5 +1,7 @@
+import { ReactNode } from "react";
+
 export interface MenuProps {
-    children: any
+    children: ReactNode
 }
 
 export default function Menu(props: MenuProps) {

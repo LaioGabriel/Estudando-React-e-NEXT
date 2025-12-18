@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useState } from "react";
+import { createContext, useState, ReactNode } from "react";
 
 export interface ContextoContadorProps {
   contador: number;
@@ -7,9 +7,9 @@ export interface ContextoContadorProps {
   decrementar: () => void;
 }
 
-const ContextoContador = createContext<ContextoContadorProps>({} as any);
+const ContextoContador = createContext<ContextoContadorProps>({} as ContextoContadorProps);
 
-export function ProvedorContador(props: any) {
+export function ProvedorContador(props: { children: ReactNode }) {
   const [contador, setContador] = useState(0);
 
   function decrementar() {

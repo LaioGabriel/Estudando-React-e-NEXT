@@ -1,5 +1,7 @@
+import { ReactNode } from "react";
+
 export interface MenuLabelProps {
-  children?: any;
+  children?: ReactNode;
 }
 
 export default function MenuLabel(props: MenuLabelProps) {

@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import {
   IconArrowDown,
   IconArrowUp,
@@ -19,7 +20,7 @@ import Rodape from "./Rodape";
 import MenuLabel from "./MenuLabel";
 
 export interface PaginaProps {
-  children?: any;
+  children?: ReactNode;
 }
 
 export default function Pagina(props: PaginaProps) {

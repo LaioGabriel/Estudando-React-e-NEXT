@@ -1,5 +1,7 @@
+import { ReactNode } from "react";
+
 export interface AreaLateralProps {
-    children: any
+    children: ReactNode
 }
 
 export default function AreaLateral(props: AreaLateralProps) {
