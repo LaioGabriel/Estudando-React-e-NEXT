@@ -11,14 +11,14 @@ export default function Pai() {
 
   return (
     <div>
-      <span className="text-3xl font-bold">Quem descobriu o Brasil?</span>
+      <span className="text-3xl font-bold">Quem Estava no barquinho?</span>
       <div className="flex gap-2 text-lg">
         <span className="text-zinc-500">Resposta:</span>
         <span className="font-semibold text-zinc-300">{resposta}</span>
       </div>
       <div className="py-7">
         <Filho
-          opcoes={["Pedro Álvares Cabral", "Índios", "Colombo"]}
+          opcoes={["Pedro", "Tiago", "João","O mar da galileia?"]}
           opcaoSelecionada={receberResposta}
         />
       </div>
