@@ -11,7 +11,7 @@ export default function EstadoBasico01() {
       <div className="flex flex-col gap-10">
         <Contador valorInicial={1000} />
         <Contador valorInicial={10000} />
-        <Contador valorInicial={-550} />
+        <Contador valorInicial={-500} />
       </div>
     </div>
   );

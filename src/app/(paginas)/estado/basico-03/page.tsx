@@ -10,7 +10,7 @@ export default function EstadoBasico02() {
       />
       <div className="flex flex-col gap-10">
         <ChuckNorisJoke />
-        <ChuckNorisJoke />
+        
       </div>
     </div>
   );
