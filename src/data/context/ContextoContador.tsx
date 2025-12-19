@@ -13,6 +13,7 @@ export function ProvedorContador(props: { children: ReactNode }) {
   const [contador, setContador] = useState(0);
 
   function decrementar() {
+    if(contador === 0) return;
     setContador(contador - 1);
   }
 
